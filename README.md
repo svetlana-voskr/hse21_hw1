@@ -30,4 +30,6 @@ ls sub* | xargs -tI{} fastqc -o trimmed_fastqc {}
 
 mkdir trimmed_multiqc
 multiqc -o trimmed_multiqc trimmed_fastqc
+
+platanus assemble -f sub_R1.fq.trimmed sub_R2.fq.trimmed 2> assemble.log
 ```
