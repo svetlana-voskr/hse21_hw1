@@ -31,5 +31,20 @@ ls sub* | xargs -tI{} fastqc -o trimmed_fastqc {}
 mkdir trimmed_multiqc
 multiqc -o trimmed_multiqc trimmed_fastqc
 
-platanus assemble -f sub_R1.fq.trimmed sub_R2.fq.trimmed 2> assemble.log
+platanus assemble -f sub1.fq.trimmed sub2.fq.trimmed 2> assemble.log
+grep '^>' out_contig.fa | wc -
 ```
+Количество контигов 610
+```
+platanus scaffold -c out_contig.fa -IP1 sub1.fq.trimmed sub2.fq.trimmed -OP2 sub1_MP.fq.int_trimmed sub2_MP.fq.int_trimmed 2> scaffold.log
+```
+Количество скаффолдов 75
+```
+platanus gap_close -c out_scaffold.fa -IP1 sub1.fq.trimmed sub2.fq.trimmed -OP2 sub1_MP.fq.int_trimmed sub2_MP.fq.int_trimmed 2> gapclose.log
+
+echo scaffold1_cov231 > seq_names.lst
+seqtk subseq out_gapClosed.fa seq_names.lst > longest.fa
+```
+## Анализ multiqc 
+
+## Вторая часть
