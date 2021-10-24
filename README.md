@@ -41,10 +41,10 @@ grep '^>' out_contig.fa | wc -
 Количество скаффолдов 75
 
 >platanus gap_close -c out_scaffold.fa -IP1 sub1.fq.trimmed sub2.fq.trimmed -OP2 sub1_MP.fq.int_trimmed sub2_MP.fq.int_trimmed 2> gapclose.log
-
->echo scaffold1_cov231 > seq_names.lst
->seqtk subseq out_gapClosed.fa seq_names.lst > longest.fa
-
+```
+echo scaffold1_cov231 > seq_names.lst
+seqtk subseq out_gapClosed.fa seq_names.lst > longest.fa
+```
 ## Анализ multiqc 
 
 ## Вторая часть
