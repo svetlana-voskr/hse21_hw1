@@ -42,9 +42,25 @@ grep '^>' out_contig.fa | wc -
 
 >platanus gap_close -c out_scaffold.fa -IP1 sub1.fq.trimmed sub2.fq.trimmed -OP2 sub1_MP.fq.int_trimmed sub2_MP.fq.int_trimmed 2> gapclose.log
 ```
-echo scaffold1_cov231 > seq_names.lst
-seqtk subseq out_gapClosed.fa seq_names.lst > longest.fa
+
+sed -n '1,/^>/p' out_scaffold.fa | head -n -1 >longest.fa
+sed -n '1,/^>/p' out_gapClosed.fa | head -n -1 >longest_gap.fa
+rm *seq
 ```
 ## Анализ multiqc 
+### 1
 
+![](images/before_general.png)
+![](images/after_general.png)
+
+### 2
+
+![](images/before_fastqc_per_base_sequence_quality_plot.png)
+![](images/after_fastqc_per_base_sequence_quality_plot.png)
+
+### 2
+
+![](images/before_fastqc_adapter_content_plot.png)
+![](images/after_fastqc_adapter_content_plot.png)
 ## Вторая часть
+Ссылка на colab: https://colab.research.google.com/drive/11-NBmadSZi6f12T7dgQ1-q9e_bSxt0xb?usp=sharing
