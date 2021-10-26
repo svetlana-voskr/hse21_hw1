@@ -42,7 +42,6 @@ grep '^>' out_contig.fa | wc -
 
 >platanus gap_close -c out_scaffold.fa -IP1 sub1.fq.trimmed sub2.fq.trimmed -OP2 sub1_MP.fq.int_trimmed sub2_MP.fq.int_trimmed 2> gapclose.log
 ```
-
 sed -n '1,/^>/p' out_scaffold.fa | head -n -1 >longest.fa
 sed -n '1,/^>/p' out_gapClosed.fa | head -n -1 >longest_gap.fa
 rm *seq
