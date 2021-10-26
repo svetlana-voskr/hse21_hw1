@@ -58,7 +58,7 @@ rm *seq
 ![](images/before_fastqc_per_base_sequence_quality_plot.png)
 ![](images/after_fastqc_per_base_sequence_quality_plot.png)
 
-### 2
+### 3
 
 ![](images/before_fastqc_adapter_content_plot.png)
 ![](images/after_fastqc_adapter_content_plot.png)
