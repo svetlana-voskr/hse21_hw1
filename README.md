@@ -54,13 +54,19 @@ rm *seq
 
 ### 2
 
-![](images/before_fastqc_per_base_sequence_quality_plot.png)
-![](images/after_fastqc_per_base_sequence_quality_plot.png)
+![](images/before_fastqc_per_sequence_quality_scores_plot.png)
+![](images/after_fastqc_per_sequence_quality_scores_plot.png)
 
 ### 3
 
+![](images/before_fastqc_per_base_sequence_quality_plot.png)
+![](images/after_fastqc_per_base_sequence_quality_plot.png)
+
+### 4
+
 ![](images/before_fastqc_adapter_content_plot.png)
 ![](images/after_fastqc_adapter_content_plot.png)
+
 ## Вторая часть
 Ссылка на colab: https://colab.research.google.com/drive/11-NBmadSZi6f12T7dgQ1-q9e_bSxt0xb?usp=sharing
 
